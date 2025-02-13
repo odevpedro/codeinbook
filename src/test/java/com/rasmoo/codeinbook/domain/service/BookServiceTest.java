@@ -45,5 +45,19 @@ public class BookServiceTest {
 
     }
 
+    @Test
+    void shouldUpdateBook() {
+        BookDto bookSaved = getBookSaved();
+        bookService.update("123",bookSaved);
+        verify(bookRepositoryPort, times(1)).update("123", bookSaved);
+
+    }
+
+
+    private static BookDto getBookSaved() {
+        return new BookDto("123", "Partindo do zero com java", "aprenda a programar agora", "", BigDecimal.valueOf(29.90));
+    }
+
+
 
 }

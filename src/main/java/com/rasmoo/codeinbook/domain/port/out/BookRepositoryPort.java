@@ -4,4 +4,6 @@ import com.rasmoo.codeinbook.common.dto.BookDto;
 
 public interface BookRepositoryPort {
     BookDto create(BookDto bookDto);
+
+    void update(String id, BookDto dto);
 }

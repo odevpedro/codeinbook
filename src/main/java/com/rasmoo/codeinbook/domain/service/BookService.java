@@ -15,4 +15,7 @@ public class BookService {
     return bookRepositoryPort.create(dto);
     }
 
+    public void update(String id, BookDto dto) {
+        bookRepositoryPort.update(id, dto);
+    }
 }
